@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+        background: #f5f7fa;
+        color: #222;
+        overflow-x: hidden;
+    }
+
+    /* ================= HEADER (BIGGER) ================= */
+    nav {
+        width: 100%;
+        padding: 32px 70px; /* Increased height */
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(255,255,255,0.95);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        z-index: 100;
+    }
+    nav h2 {
+        font-size: 50px; /* Bigger brand name */
+        font-weight: 700;
+    }
+    nav a {
+        margin-left: 32px;
+        text-decoration: none;
+        color: #333;
+        font-size: 35px; /* Bigger menu text */
+        font-weight: 600;
+    }
+
+    /* ================= HERO SECTION ================= */
+    .hero {
+        height: 100vh;
+        width: 100%;
+        padding-top: 160px; /* Adjusted to fit bigger header */
+        background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c')
+            center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    .hero h1 {
+        font-size: 57px;
+        max-width: 900px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    .hero p {
+        max-width: 700px;
+        font-size: 21px;
+        margin-bottom: 35px;
+    }
+    .btn-main {
+        padding: 15px 40px;
+        background: #fff;
+        color: #1a73e8;
+        border-radius: 40px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        transition: 0.2s;
+    }
+    .btn-main:hover {
+        background: #1a73e8;
+        color: white;
+    }
+
+    /* ================= FEATURES GRID ================= */
+    .features {
+        max-width: 1300px;
+        margin: 80px auto;
+        padding: 20px;
+        display: grid;
+        gap: 35px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .feature-box {
+        background: #fff;
+        padding: 35px 25px;
+        border-radius: 14px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+    .feature-box img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    .feature-box h3 {
+        margin-bottom: 10px;
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    /* ================= ABOUT SECTION ================= */
+    .about {
+        max-width: 1300px;
+        margin: 80px auto;
+        padding: 20px;
+        display: flex;
+        gap: 40px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    .about img {
+        width: 50%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .about-text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-text h2 {
+        font-size: 35px;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    .about-text p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #444;
+        margin-bottom: 20px;
+    }
+
+    /* ================= FULL SCREEN CTA ================= */
+    .full-cta {
+        height: 75vh;
+        background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d')
+            center/cover no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+    }
+    .full-cta h2 {
+        font-size: 42px;
+        max-width: 800px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+        text-align: center;
+        padding: 30px;
+        background: #111;
+        color: #bbb;
+        font-size: 15px;
+        margin-top: 50px;
+    }
+
+    /* ================= RESPONSIVE FIXES ================= */
+    @media(max-width: 900px) {
+        nav {
+            flex-direction: column;
+            gap: 10px;
+            padding: 25px;
+        }
+        .about {
+            flex-direction: column;
+        }
+        .about img, .about-text {
+            width: 100%;
+        }
+        .hero h1 {
+            font-size: 38px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION BAR ================= -->
+<nav>
+    <h2>CoreStudio</h2>
+    <div>
+        <a href="Landing.html">Home</a>
+        <a href="Service.html">Services</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+    <h1>Build Beautiful, Professional Websites That Stand Out</h1>
+    <p>Modern designs, powerful tools, and responsive layouts that fit every screen size perfectly.</p>
+    <a class="btn-main" href="#">Get Started</a>
+</section>
+
+<!-- ================= FEATURES SECTION ================= -->
+<section class="features">
+    <div class="feature-box">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+        <h3>Lightning Performance</h3>
+        <p>Optimized for speed using next-gen technology and clean architecture.</p>
+    </div>
+
+    <div class="feature-box">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
+        <h3>Modern UI / UX</h3>
+        <p>Beautiful, intuitive layouts that improve user engagement instantly.</p>
+    </div>
+
+    <div class="feature-box">
+        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7">
+        <h3>Fully Customizable</h3>
+        <p>Colors, animations, structure, fonts — everything is editable.</p>
+    </div>
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="about">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+    <div class="about-text">
+        <h2>Designed With Precision</h2>
+        <p>
+            Our templates are crafted by professional designers for perfect balance,
+            clean spacing, and modern aesthetics. No clutter. No complexity.
+        </p>
+        <p>
+            Whether you're building a portfolio, a business website, or a landing page,
+            this design gives you the ideal foundation for a clean and elegant look.
+        </p>
+    </div>
+</section>
+
+<!-- ================= FULL SCREEN CTA ================= -->
+<section class="full-cta">
+    <div>
+        <h2>Take Your Website to the Next Level Today</h2>
+        <a class="btn-main" href="#">Start Now</a>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    © 2025 Full Screen Landing Page | Designed for Abhijith Mohanan
+</footer>
+
+</body>
+</html>
