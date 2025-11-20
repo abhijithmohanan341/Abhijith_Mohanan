@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhijith Mohanan - Portfolio</title>
+
+<style>
+:root{
+  --bg:#08090d;
+  --card:#101218;
+  --text:#e6eef6;
+  --muted:#9aa1ad;
+  --accent:#ffb400;
+  --radius:14px;
+  --max:1400px;
+  --shadow:0 8px 26px rgba(0,0,0,0.55);
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:Poppins, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+  position:fixed;top:0;left:0;right:0;
+  padding:28px 40px;
+  background:rgba(10,12,18,0.7);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  z-index:99;
+}
+.nav{
+  max-width:var(--max);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.brand{display:flex;align-items:center;gap:15px;}
+.brand .logo{
+  width:46px;height:46px;border-radius:12px;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#111;
+}
+nav a{
+  color:var(--muted);
+  margin-left:30px;
+  text-decoration:none;
+  font-weight:700;
+  padding-bottom:4px;
+}
+nav a:hover{color:var(--text);}
+nav a.active-link{
+  color:var(--accent);
+  border-bottom:2px solid var(--accent);
+}
+
+/* WRAPPER */
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 130px 40px 60px;
+}
+
+/* FULL-SCREEN HERO FIXED */
+.hero{
+  height: calc(100vh - 110px);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEXT CARD */
+.hero-text{
+  background: var(--card);
+  padding: 40px;
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 600px;
+  margin-left: auto;
+}
+.hero-text h1{
+  font-size:45px;
+  font-weight:700;
+  line-height:1.15;
+  margin-bottom:12px;
+}
+.hero-text p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  padding:14px 24px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#111;
+  font-weight:700;
+  margin-top:10px;
+}
+
+/* IMAGE CARD */
+.hero-img{
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 14px;
+  height: 100%;
+  width: 100%;
+  box-shadow: var(--shadow);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.hero-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* SECTION CARD STYLE */
+section{
+  background:var(--card);
+  padding:26px;
+  border-radius:var(--radius);
+  margin-top:40px;
+  box-shadow:var(--shadow);
+}
+section h2{
+  margin-bottom:14px;
+  font-size:26px;
+}
+section p{
+  color:var(--muted);
+  line-height:1.6;
+  margin-bottom:8px;
+}
+ul{
+  margin-left:18px;
+  color:var(--muted);
+}
+li{margin-bottom:6px;}
+
+/* SKILLS */
+.skills{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+.skill{
+  background:rgba(255,255,255,0.05);
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+/* CONTACT */
+.contact-box{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  font-size:16px;
+}
+
+/* SECTION CLICK-HIGHLIGHT */
+.highlight-section{
+  animation: sectionGlow 1.2s ease-out;
+  border:1px solid var(--accent) !important;
+  box-shadow:0 0 22px rgba(255,180,0,0.45) !important;
+}
+@keyframes sectionGlow{
+  0%{box-shadow:0 0 0 rgba(255,180,0,0);}
+  50%{box-shadow:0 0 22px rgba(255,180,0,0.6);}
+  100%{box-shadow:0 0 0 rgba(255,180,0,0);}
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 0;
+  color:var(--muted);
+  margin-top:30px;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .hero{
+    grid-template-columns:1fr;
+    height:auto;
+    padding-top:150px;
+  }
+  .hero-img{height:350px;}
+  .hero-text h1{font-size:32px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <div class="logo">AM</div>
+      <div>
+        <b>Abhijith Mohanan</b><br>
+        <div style="font-size:12px;color:var(--muted);"><b>Software Developer | Cybersecurity Analyst</b></div>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#project">Project</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hello, I'm Abhijith Mohanan</h1>
+      <p>Software Developer and Cybersecurity Analyst passionate about Python, SQL, Data Visualization, and full-stack development.</p>
+      <a href="Abhijith_resume.pdf" class="btn" download>Download Resume</a>
+    </div>
+
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Motivated BCA student aiming to start a career in Data Analysis or IT. Skilled in Python, SQL, Power BI, and Data Visualization with strong understanding of programming and databases. Passionate about transforming data into meaningful insights and building useful applications.</p>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><b>BCA</b> — Nirmala College, Muvattupuzha (2026)</li>
+      <li><b>Higher Secondary</b> — St. Sebastian’s HSS, Anicadu (2023)</li>
+      <li><b>SSLC</b> — St. Sebastian’s HSS, Anicadu (2021)</li>
+    </ul>
+  </section>
+
+  <!-- PROJECT -->
+  <section id="project">
+    <h2>Project</h2>
+    <h3>Online Parking Slot Booking System</h3>
+    <p><b>Role:</b> Lead Developer & Database Manager</p>
+    <p><b>Tools:</b> PHP, HTML, MySQL, JavaScript</p>
+    <ul>
+      <li>Developed full-stack parking slot booking platform with Admin/User modules.</li>
+      <li>Designed & managed complete normalized MySQL database.</li>
+      <li>Implemented secure role-based login.</li>
+      <li>Created real-time slot availability & booking UI.</li>
+      <li>Automated confirmation & cancellation workflows.</li>
+    </ul>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Power BI</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">PHP</div>
+      <div class="skill">Java</div>
+      <div class="skill">C</div>
+      <div class="skill">C++</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">Excel</div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <ul>
+      <li>Python Programming — ICT Academy (2025)</li>
+      <li>Data Visualization using Power BI — KGISL MicroCollege (2025)</li>
+      <li>Python Basics for Data Science — IBM (2023)</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-box">
+      <p><b>Email:</b> abhijithmohanan341@gmail.com</p>
+      <p><b>Phone:</b> +91 8590678185</p>
+      <p><b>LinkedIn:</b> linkedin.com/in/abhijith-mohanan-656601379</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Abhijith Mohanan • Portfolio Website
+  </footer>
+
+</div>
+
+<!-- SECTION HIGHLIGHT + ACTIVE MENU -->
+<script>
+document.querySelectorAll("nav a").forEach(link => {
+  link.addEventListener("click", function(){
+
+    // Active link highlight
+    document.querySelectorAll("nav a").forEach(a => a.classList.remove("active-link"));
+    this.classList.add("active-link");
+
+    // Section glow highlight
+    document.querySelectorAll("section").forEach(sec => sec.classList.remove("highlight-section"));
+
+    const target = document.querySelector(this.getAttribute("href"));
+    if(target){
+      target.classList.add("highlight-section");
+      setTimeout(() => target.classList.remove("highlight-section"), 1500);
+    }
+  });
+});
+</script>
+
+</body>
+</html>
